@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSK Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="4d00631d22a0cd8556cf55c73db6291f.png" alt="CSK Logo" class="logo">
+        </div>
+        <h1>Welcome to Chennai Super Kings Fan Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#team-info">Team Info</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#players">Players</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#engagement">Fan Engagement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-csk">
+            <h2>About CSK</h2>
+            <p>Chennai Super Kings (CSK) is one of the most successful teams in the history of the Indian Premier League (IPL). With a loyal fanbase and exceptional performance, CSK has won the IPL championship a remarkable five times.</p>
+            
+            <h3>CSK: 5-Time IPL Champions</h3>
+            
+            <div class="trophies">
+                <img src="2011.webp" alt="IPL Trophy 2010" class="trophy-img">
+                <img src="2010.jpg" alt="IPL Trophy 2011" class="trophy-img">
+                <img src="2018.png" alt="IPL Trophy 2018" class="trophy-img">
+                <img src="2021.webp" alt="IPL Trophy 2021" class="trophy-img">
+                <img src="23.avif" alt="IPL Trophy 2023" class="trophy-img">
+            </div>
+            
+            <p><em>Last Updated: November 2024</em></p>
+        </section>
+        
+
+        <section id="match-schedule">
+            <h2>Match Schedule</h2>
+        
+            <!-- Match 1 -->
+            <div class="match-box">
+                <h3>CSK vs MI</h3>
+                <p>Date: April 3, 2024</p>
+                <p>Venue: MA Chidambaram Stadium</p>
+            </div>
+        
+            <!-- Match 2 -->
+            <div class="match-box">
+                <h3>CSK vs DC</h3>
+                <p>Date: April 5, 2024</p>
+                <p>Venue: MA Chidambaram Stadium</p>
+            </div>
+        
+            <!-- Match 3 -->
+            <div class="match-box">
+                <h3>CSK vs KKR</h3>
+                <p>Date: April 8, 2024</p>
+                <p>Venue: Eden Gardens</p>
+            </div>
+        
+            <!-- Match 4 -->
+            <div class="match-box">
+                <h3>CSK vs RR</h3>
+                <p>Date: April 10, 2024</p>
+                <p>Venue: Sawai Mansingh Stadium</p>
+            </div>
+        
+            <!-- Match 5 -->
+            <div class="match-box">
+                <h3>CSK vs RCB</h3>
+                <p>Date: April 12, 2024</p>
+                <p>Venue: M Chinnaswamy Stadium</p>
+            </div>
+        
+            <!-- Match 6 -->
+            <div class="match-box">
+                <h3>CSK vs SRH</h3>
+                <p>Date: April 14, 2024</p>
+                <p>Venue: Rajiv Gandhi International Cricket Stadium</p>
+            </div>
+        </section>
+        
+
+        <section id="players">
+            <h2>Meet the Star Players of CSK</h2>
+        
+            <div class="players-container">
+                <div class="player">
+                    <img src="dhoni.webp" alt="Player Name" class="player-img">
+                    <div class="player-info">
+                        <h3>MS Dhoni</h3>
+                        <p>Role:Wicket keeper</p>
+                    </div>
+                </div>
+        
+                <div class="player">
+                    <img src="pathi.webp" alt="Player Name" class="player-img">
+                    <div class="player-info">
+                        <h3>Pathirana</h3>
+                        <p>Role: Bowler</p>
+                    </div>
+                </div>
+        
+                <div class="player">
+                    <img src="jaddu.webp" alt="Player Name" class="player-img">
+                    <div class="player-info">
+                        <h3>Jaddu</h3>
+                        <p>Role: All-rounder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="news">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <h3>CSK Announces New Captain for Upcoming Season</h3>
+                <p>In a recent press release, CSK announced that [Player Name] will be taking over as the new captain for the upcoming season, following [Previous Captain]’s retirement.</p>
+                <p><em>Posted on: November 12, 2024</em></p>
+            </div>
+        
+            <div class="news-item">
+                <h3>CSK Signs Key Player Ahead of the 2024 IPL Season</h3>
+                <p>CSK has completed the signing of [Player Name], a renowned [player's role] to strengthen their squad ahead of the new season. Fans are excited to see this new talent in action!</p>
+                <p><em>Posted on: November 10, 2024</em></p>
+            </div>
+        
+            <div class="news-item">
+                <h3>CSK vs MI: A Thrilling Contest Ahead</h3>
+                <p>The much-anticipated match between CSK and Mumbai Indians is set to take place on [Date]. Fans are eagerly awaiting the intense rivalry, with both teams looking strong this year.</p>
+                <p><em>Posted on: November 8, 2024</em></p>
+            </div>
+        </section>
+        
+
+        <section id="engagement">
+            <h2>Fan Engagement</h2>
+            <p>Vote: Which team will win this season?</p>
+        
+            <div id="vote-options">
+                <button id="vote-csk" onclick="vote('CSK')">CSK</button>
+                <button id="vote-mi" onclick="vote('MI')">MI</button>
+            </div>
+        
+            <div id="result">
+                <p><strong>Votes:</strong></p>
+                <p>CSK: <span id="csk-votes">0</span></p>
+                <p>MI: <span id="mi-votes">0</span></p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CSK Fan Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
