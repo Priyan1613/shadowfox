@@ -1,0 +1,110 @@
+// Example function to dynamically show match schedule
+function showSchedule() {
+    const schedule = [
+        { date: "2024-11-15", opponent: "Mumbai Indians", venue: "Chennai" },
+        { date: "2024-11-18", opponent: "Delhi Capitals", venue: "Delhi" }
+    ];
+    
+    const scheduleSection = document.getElementById('schedule');
+    let scheduleHTML = "<ul>";
+    schedule.forEach(match => {
+        scheduleHTML += `<li>${match.date} - ${match.opponent} at ${match.venue}</li>`;
+    });
+    scheduleHTML += "</ul>";
+    
+    scheduleSection.innerHTML += scheduleHTML;
+}
+// Store votes in memory (for simplicity; could use local storage for persistence across sessions)
+let cskVotes = 0;
+let miVotes = 0;
+
+// Function to handle voting
+function vote(team) {
+    if (team === 'CSK') {
+        cskVotes++;
+        document.getElementById('csk-votes').innerText = cskVotes;
+    } else if (team === 'MI') {
+        miVotes++;
+        document.getElementById('mi-votes').innerText = miVotes;
+    }
+}
+// Example of dynamically adding news articles
+function loadNews() {
+    const newsSection = document.getElementById('news');
+    const news = [
+        {
+            title: "CSK Announces New Captain for Upcoming Season",
+            content: "In a recent press release, CSK announced that [Player Name] will be taking over as the new captain for the upcoming season, following [Previous Captain]’s retirement.",
+            date: "November 12, 2024"
+        },
+        {
+            title: "CSK Signs Key Player Ahead of the 2024 IPL Season",
+            content: "CSK has completed the signing of [Player Name], a renowned [player's role] to strengthen their squad ahead of the new season. Fans are excited to see this new talent in action!",
+            date: "November 10, 2024"
+        },
+        {
+            title: "CSK vs MI: A Thrilling Contest Ahead",
+            content: "The much-anticipated match between CSK and Mumbai Indians is set to take place on [Date]. Fans are eagerly awaiting the intense rivalry, with both teams looking strong this year.",
+            date: "November 8, 2024"
+        }
+    ];
+
+    news.forEach(article => {
+        const newsItem = document.createElement('div');
+        newsItem.classList.add('news-item');
+
+        newsItem.innerHTML = `
+            <h3>${article.title}</h3>
+            <p>${article.content}</p>
+            <p><em>Posted on: ${article.date}</em></p>
+        `;
+
+        newsSection.appendChild(newsItem);
+    });
+}
+// Example of dynamically adding star players
+function loadPlayers() {
+    const players = [
+        {
+            name: "MS Dhoni",
+            role: "Captain, Wicketkeeper-Batsman",
+            imgSrc: "assets/ms-dhoni.jpg"
+        },
+        {
+            name: "Ravindra Jadeja",
+            role: "All-rounder",
+            imgSrc: "assets/ravindra-jadeja.jpg"
+        },
+        {
+            name: "Deepak Chahar",
+            role: "Bowler",
+            imgSrc: "assets/deepak-chahar.jpg"
+        }
+    ];
+
+    const playersContainer = document.querySelector('.players-container');
+    
+    players.forEach(player => {
+        const playerDiv = document.createElement('div');
+        playerDiv.classList.add('player');
+        
+        playerDiv.innerHTML = `
+            <img src="${player.imgSrc}" alt="${player.name}" class="player-img">
+            <div class="player-info">
+                <h3>${player.name}</h3>
+                <p>Role: ${player.role}</p>
+            </div>
+        `;
+
+        playersContainer.appendChild(playerDiv);
+    });
+}
+
+// Call the loadPlayers function when the page loads
+window.onload = loadPlayers;
+
+// Call the loadNews function to display news
+window.onload = loadNews;
+
+// Call the function to show the schedule when the page loads
+window.onload = showSchedule;
